@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Travel Agent</title>
+	<meta><%= csrf_meta_tags %></meta>
+</head>
+<body>
+<form accept-charset='UTF-8' action='/get_bill' method='post'>
+
+<label>Auto Number:  </label>
+<%= select_tag :auto_number, options_from_collection_for_select(Auto.all, :number, :number, params[:auto_number]),:prompt => "Please select" %>&nbsp;&nbsp;
+<br/><br/>
+<label>From:  </label>
+<%= select_tag :source, options_from_collection_for_select(Source.all, :name, :name, params[:source_name]),:prompt => "Please select" %>&nbsp;&nbsp;
+<br/><br/>
+<label>To:  </label>
+<%= select_tag :destination, options_from_collection_for_select(Destination.all, :name, :name, params[:destination_name]), :prompt => "Please select" %>&nbsp;&nbsp;
+<br/><br/>
+<label>Distance </label>
+<input class="form-control" type="text"  name="distance"></br></br>
+<input class="btn btn-primary" name='commit' type='submit' value='Genarate Bill'>
+<br/><br/>
+
+</form>
+</body>
+</html>
