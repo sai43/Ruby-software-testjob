@@ -8,8 +8,9 @@
 <p>Auto Number: <%=@auto_number%></p><br/>
 <p>From: <%=@source%></p><br/>
 <p>To: <%=@destination%></p><br/>
-<p>Fare: Rs <b><%=@fare%></b><br/></p>
-<button>Print</button><br/><br/>
+<p>Distance: <%=" #{@distance} Km"%></p><br/>
+<p>Fare: Rs <b><%=@fare%></b></p><br/>
+<button>Print</button><br/>
 <%= link_to 'Back', root_url%> 
 </body>
 </html>

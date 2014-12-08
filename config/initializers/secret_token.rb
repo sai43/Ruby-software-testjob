@@ -1,0 +1,1 @@
+TravelApp::Application.config.secret_token = ENV['SECRET_TOKEN'] || '85ef12f1e11c429d1ea7161de081a8404315c4a241731f4de3265c6040a4b3c41bc6f2eef2c76822060e4a111fa347193cc77e01932a0cf29180cacfffe36b8c'

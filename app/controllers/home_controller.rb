@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  skip_before_filter :verify_authenticity_token  
+   
   def index
   end
 
@@ -16,7 +16,7 @@ class HomeController < ApplicationController
   end
   def get_fare distance
   	if distance
-  		distance = distance.to_i
+  		distance = distance.to_f
   	  	if distance <= 1.5
   	  		return 20
   	  	else
@@ -29,7 +29,7 @@ class HomeController < ApplicationController
   end
 
   def generate_id
-  	o = [('A'..'Z'), (1..10)].map { |i| i.to_a }.flatten
-  	return (0...30).map { o[rand(o.length)] }.join
+  	return SecureRandom.hex(16)
   end
+    
 end
